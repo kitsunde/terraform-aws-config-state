@@ -25,7 +25,7 @@ In outputs there is **terraform_config** with generated terraform configuration 
 You can paste it directly into new terraform code where you want to start using multiple workspaces:
 
 ```
-terraform output terraform_config > tfstate.tf
+terraform output --module=config-state terraform_config > tfstate.tf
 ```
 
 Then follow [documentation](https://www.terraform.io/docs/state/workspaces.html) on how to use workspaces and leverage it when dealing with multiple environments and many people working with code.
